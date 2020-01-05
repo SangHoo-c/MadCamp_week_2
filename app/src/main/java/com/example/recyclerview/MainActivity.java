@@ -1,35 +1,22 @@
 package com.example.recyclerview;
 
-import android.Manifest;
-import android.content.ClipData;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.recyclerview.gallery.Fragment_Gallery;
 import com.google.android.material.tabs.TabLayout;
-
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private ViewPagerAdapter adapter;
-    public FragmentGallery fragmentGallery = new FragmentGallery();
+    public Fragment_Gallery fragment_gallery = new Fragment_Gallery();
 
 
     @Override
@@ -43,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Add Fragment and set tab name
         adapter.AddFragment(new FragmentContacts(), "");
-        adapter.AddFragment(fragmentGallery, "");
+        adapter.AddFragment(fragment_gallery, "");
         adapter.AddFragment(new FragmentRestaurant(), "");
 
         viewPager.setOffscreenPageLimit(3);

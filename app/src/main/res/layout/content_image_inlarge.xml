@@ -3,13 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/frame"
     xmlns:fabview="http://schemas.android.com/apk/res-auto"
     >
 
-    <com.github.chrisbanes.photoview.PhotoView
+    <ImageView
+        android:background="@drawable/santorini"
         android:id="@+id/image_large"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="20dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/gallery_view_layout"
+        />
+
 
 
 
